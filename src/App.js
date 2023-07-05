@@ -1,10 +1,12 @@
 import MovieList from "./MovieList";
 import Student from "./Student";
+import Navbar from "./Navbar";
 
 function App() {
   return (
     <>
-      <h1>Movie App</h1> 
+      <Navbar />
+      {/* <h1>Movie App</h1>  */}
       <MovieList />
       {/* <Student name="Alexa" marks={10} />
       <Student name="Siri" marks={20}/>

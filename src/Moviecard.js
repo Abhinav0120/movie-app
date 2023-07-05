@@ -46,12 +46,12 @@ class MovieCard extends React.Component{
 
     render(){
         const {movies, addStars, removeStar, handleFav, handleCart} = this.props;
-        const{title,plot,price,rating,star,fav,isInCart} = this.props.movies;
+        const{title,plot,poster,price,rating,star,fav,isInCart} = this.props.movies;
         return (
             <div className="main">
                 <div className="movie-card">
                     <div className="left">
-                        <img alt="Poster" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQA_-tL18_rj9zEcjN6n41NEaJm-kRNF9UeOtvksZ4z_OW6jRA9" />
+                        <img alt="Poster" src={poster} />
                     </div>
                     <div className="right">
                         <div className="title">{title}</div>
@@ -73,7 +73,7 @@ class MovieCard extends React.Component{
                                 src="https://cdn-icons-png.flaticon.com/128/3524/3524388.png"
                                 onClick={()=>{addStars(movies)}}/>
 
-                                <sapn>{star}</sapn>
+                                <span>{star}</span>
                             </div>
                             {
                                 // fav?  <button className="unfavourite-btn" onClick={this.handleFav}>Un-Favorite</button> :
