@@ -1,52 +1,9 @@
 import React from "react";
 
-class MovieCard extends React.Component{
+function MovieCard(props){
 
-    // addStars= ()=>{
-
-    //     // if(this.state.stars >=5){
-    //     //     return;
-    //     // }
-    //     // form1
-    //     // this.setState({
-    //     //     stars: this.state.stars + 0.5
-    //     // });
-
-    //     // form2
-    //     this.setState((prevState) =>{
-    //         return{
-    //             stars:prevState.stars+0.5
-    //         }
-    //     });
-
-    // }
-
-    // removeStar = ()=>{
-    //     if(this.state.stars > 0){
-    //         this.setState((prevState)=>{
-    //             return{
-    //                 stars:prevState.stars-0.5
-    //             }
-    //         });
-    //     }
-        
-    // }
-
-    // handleFav = () =>{
-    //     this.setState({
-    //         fav: !this.state.fav
-    //     });
-    // }
-
-    // handleCart = () =>{
-    //     this.setState({
-    //         inCart: !this.state.inCart
-    //     })
-    // }
-
-    render(){
-        const {movies, addStars, removeStar, handleFav, handleCart} = this.props;
-        const{title,plot,poster,price,rating,star,fav,isInCart} = this.props.movies;
+        const {movies, addStars, removeStar, handleFav, handleCart} = props;
+        const{title,plot,poster,price,rating,star,fav,isInCart} = props.movies;
         return (
             <div className="main">
                 <div className="movie-card">
@@ -89,7 +46,6 @@ class MovieCard extends React.Component{
                 </div>
             </div>
         )
-    }
 }
 
 export default MovieCard;
